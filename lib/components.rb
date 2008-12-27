@@ -30,7 +30,7 @@ module Components
 
   module HelperMethods
     def render_component(options)
-      @controller.send!(:render_component_as_string, options)
+      @controller.__send__(:render_component_as_string, options)
     end
   end
 
